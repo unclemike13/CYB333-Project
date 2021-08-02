@@ -8,4 +8,6 @@ and perform it's monitoring task of checking the connection.  If a
 request code is received that indicates an interruption in service, 
 an email will be sent to the site administrator.  This tool will 
 ensure that the site administrator will always be aware if there is
-a loss in connectivity to the website. 
+a loss in connectivity to the website. This tool can be automated 
+to run as often as you want through either "chron" on Linux 
+distrubutions or through "Task Scheduler" in a Windows environment.
