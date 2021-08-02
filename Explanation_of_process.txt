@@ -1,0 +1,27 @@
+Explanation of Timeline:
+
+Day 1:
+- Develop python script for end user application
+    -Incorporate use of OS environment variables to keep email addresses and passwords for site admins confidential
+    -Leverage SMTP protocol to establish connection with Gmail account for email in case of connectivity issues
+- Create Azure VM instance to host Apache2 webserver
+    -Configure webserver to be accessible through SSH for administration
+- Create README for project overview to end users
+
+Day 2:
+- Perform test of python script
+    -TEST1: 
+            1. Start Apache2 webserver and host a website
+            2. Navigate to website to ensure it is up
+            3. Run script to see if a "connectivity issue" email is generated and sent
+    -TEST2: 
+            1. Stop Apache2 webserver process
+            2. Navigate to the website to ensure it is down
+            3. Run script to see if a "connectivity issue" email is generated and sent
+               Monitor site administrator email account
+
+TEST RESULTS:
+    TEST1: Script executed as expected and since the website was up, no email was generated
+
+    TEST2: Script executed as expected and since the website was down, an email was generated and sent to site admin
+
