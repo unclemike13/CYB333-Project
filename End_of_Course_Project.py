@@ -20,7 +20,7 @@ def notify_user():
         smtp.login(EMAIL_ADDRESS,EMAIL_PASSWORD)
         
         subject = 'Your website is down'
-        body = 'Ensure you restart your server and that it is operating normal'
+        body = 'Ensure you investigate the connectivity issues with your website'
         msg = f'Subject: {subject}\n\n{body}'
         
         smtp.sendmail(EMAIL_ADDRESS, EMAIL_ADDRESS, msg)
