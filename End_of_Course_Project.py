@@ -24,29 +24,10 @@ def notify_user():
         msg = f'Subject: {subject}\n\n{body}'
         
         smtp.sendmail(EMAIL_ADDRESS, EMAIL_ADDRESS, msg)
-
-def reboot_server():
-    # client = LinodeClient(LINODE_TOKEN)
-    # my_server = client.linode(Instance, XXXXX)
-    # my_server.reboot()
-    # for linode in client.linode.instances():
-    #     print(f'{linode.lable}:  {linode.id}')
-
 try:
-    r = requests.get('https://www.google.com', timeout=10)
+    r = requests.get('http://52.240.59.221/', timeout=10)
     
     if r.status_code !=200:
         notify_user()
-        reboot_server()
-    
 except Exception as e:
-    raise e
-
-
-
-
-        
-
-
-
-
+    notify_user()
